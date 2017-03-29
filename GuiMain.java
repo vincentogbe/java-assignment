@@ -40,7 +40,8 @@ public class GuiMain extends JFrame implements ActionListener
 		setSize(300,300);
 		setLayout(new FlowLayout());
 		
-		setSize(500,500);
+		
+
 		 JMenuBar jmb =new JMenuBar();
 		 setJMenuBar(jmb);
 		
@@ -51,20 +52,26 @@ public class GuiMain extends JFrame implements ActionListener
 		 JMenu help =new JMenu("help");
 		 jmb.add(help);
 		 
+		 help.addActionListener(this);
+		 
 		 JMenuItem open =new JMenuItem();
 		 file.add("open");
 		JMenuItem exit = new JMenuItem();
 		file.add("exit");
+		open.addActionListener(this);
 		
 		button2 = new JButton("click to enter word");
+		button2.addActionListener(this);
 		button3 = new JButton("edit dictionary ");
+		button3.addActionListener(this);
 		 
 	
 		add(button2);
 		add(button3);
-		 
+		
 		 
 		 setVisible(true);
+		
 		
 		
 	}
@@ -73,22 +80,15 @@ public class GuiMain extends JFrame implements ActionListener
 	{
 		if(e.getSource().equals(button2))
 		{
-			Click enter_word =new Click("eddy");
-			
+			Click enter_word =new Click("search");
+		
 		}
 		else if (e.getSource().equals(button3))
 		{
-			EDIT word = new EDIT("JESS");
+			EDIT word = new EDIT("edit ");
 		}
-		else if (e.getSource().equals(button2))
-		{
-			Open file1 =new Open("okoko");
-		}
-		else if (e.getSource().equals(button2))
-		{
-			HELP file2 =new HELP("PETER");
-		}
-
+		
+		
 	}
 
 
