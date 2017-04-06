@@ -9,29 +9,23 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
 public class GuiMain extends JFrame implements ActionListener
 {
 	
 	
-	JButton button2;
-	JButton button3;
+	JButton button;
+	JMenu file;
+	JMenuBar jmb;
+	JMenu help;
+	JMenuItem open;
+	JMenuItem exit;
 	
-	public JButton getButton2() {
-		return button2;
+	public JButton getButton() {
+		return button;
 	}
 
-	public void setButton2(JButton button2) {
-		this.button2 = button2;
-	}
-
-	public JButton getButton3() {
-		return button3;
-	}
-
-	public void setButton3(JButton button3) {
-		this.button3 = button3;
-	}
 	
 	GuiMain(String title)
 	{
@@ -54,20 +48,18 @@ public class GuiMain extends JFrame implements ActionListener
 		 
 		 help.addActionListener(this);
 		 
-		 JMenuItem open =new JMenuItem();
-		 file.add("open");
-		JMenuItem exit = new JMenuItem();
-		file.add("exit");
+		 JMenuItem open =new JMenuItem("open");
+		 file.add(open);
+		JMenuItem exit = new JMenuItem("exit");
+		file.add(exit);
 		open.addActionListener(this);
-		
-		button2 = new JButton("click to enter word");
-		button2.addActionListener(this);
-		button3 = new JButton("edit dictionary ");
-		button3.addActionListener(this);
+	
+		button = new JButton("edit dictionary ");
+		button.addActionListener(this);
 		 
 	
-		add(button2);
-		add(button3);
+		add(button);
+		
 		
 		 
 		 setVisible(true);
@@ -78,16 +70,20 @@ public class GuiMain extends JFrame implements ActionListener
 	
 	public void actionPerformed(ActionEvent e)
 	{
-		if(e.getSource().equals(button2))
-		{
-			Click enter_word =new Click("search");
+	
 		
-		}
-		else if (e.getSource().equals(button3))
+		if(e.getSource().equals(button))
 		{
 			EDIT word = new EDIT("edit ");
-		}
+			JOptionPane.showMessageDialog(null,"its working");
+			Click enter_word = new Click("search");
 		
+		}
+		else if (e.getSource().equals(open))
+		{
+			JOptionPane.showMessageDialog(null,"its working");
+			Click enter_word = new Click("search");
+		}
 		
 	}
 

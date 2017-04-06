@@ -4,6 +4,7 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -17,69 +18,109 @@ public class EDIT extends JFrame implements ActionListener
 	JButton addword;
 	JButton delword;
 	JButton viewword;
-	JTextField textfields;
+	JTextField textfield1;
+	JTextField textfield2;
+	JTextField textfield3;
 
-	public JButton getAddword() {
+	public JTextField getTextfield1s() 
+	{
+		return textfield1;
+	}
+
+	public void setTextfield1s(JTextField textfield1)
+	{
+		this.textfield1 = textfield1;
+	}
+
+	public JTextField getTextfield2()
+	{
+		return textfield2;
+	}
+
+	public void setTextfield2(JTextField textfield2)
+	{
+		this.textfield2 = textfield2;
+	}
+
+	public JTextField getTextfield3()
+	{
+		return textfield3;
+	}
+
+	public void setTextfield3(JTextField textfield3)
+	{
+		this.textfield3 = textfield3;
+	}
+	public JTextField getTextfield()
+	{
+		return textfield1;
+	}
+
+	public void setTextfields(JTextField textfields)
+	{
+		this.textfield1 = textfields;
+	}
+
+
+	public JButton getAddword()
+	{
 		return addword;
 	}
 
-	public void setAddword(JButton addword) {
+	public void setAddword(JButton addword)
+	{
 		this.addword = addword;
 	}
 
-	public JButton getDelword() {
+	public JButton getDelword() 
+	{
 		return delword;
 	}
 
-	public void setDelword(JButton delword) {
+	public void setDelword(JButton delword)
+	{
 		this.delword = delword;
 	}
 
-	public JButton getViewword() {
+	public JButton getViewword() 
+	{
 		return viewword;
 	}
 
-	public void setViewword(JButton viewword) {
+	public void setViewword(JButton viewword) 
+	{
 		this.viewword = viewword;
 	}
 	
-	public JTextField getTextfields() {
-		return textfields;
-	}
-
-	public void setTextfields(JTextField textfields) {
-		this.textfields = textfields;
-	}
-
+	
 	EDIT(String title)
 	
 	{
 		super(title);
 		setSize(200,200);
 		setLayout(new FlowLayout());
+		Box the_box = Box.createVerticalBox();
+		this.add(the_box);
 		
-		JMenuBar jmb = new JMenuBar();
-		setJMenuBar(jmb);
-		
-		JMenu file = new JMenu();
-		jmb.add(file);
-		
-		JMenuItem open =new JMenuItem();
-		file.add(open);
-		
-		JMenuItem exit = new JMenuItem();
-		file.add(exit);
-		
-		addword = new JButton("add");
+		addword = new JButton("Add word");
 		addword.addActionListener(this);
-		delword = new JButton("delet");
+		textfield1= new JTextField("");
+		
+		delword = new JButton("delet word");	
 		delword.addActionListener(this);
+		textfield2 =new JTextField("");
+		
 		viewword = new JButton("view words");
 		viewword.addActionListener(this);
-		textfields = new JTextField("add word   ");
-		add(addword);
-		add(delword);
-		add(viewword);
+		textfield3= new JTextField("");
+	
+		the_box.add(textfield1);
+		the_box.add(addword);
+		the_box.add(textfield2);
+		the_box.add(delword);
+		the_box.add(textfield3);
+		the_box.add(viewword);
+
 		
 		setVisible(true);
 		
@@ -93,7 +134,7 @@ public class EDIT extends JFrame implements ActionListener
 			
 			setVisible(true);
 			
-			textfields.getText();
+			textfield1.getText();
 			//String cardsn = textfields.getText();
 			//System.exit(0);
 		}
