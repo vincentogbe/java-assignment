@@ -42,7 +42,7 @@ public class Click  implements ActionListener
 			}
 		});
 		
-		frame.setSize(300,300);
+		frame.setSize(500,300);
 		frame.add(button);
 		frame.pack();
 		frame.setVisible(true);

@@ -45,14 +45,16 @@ public class GuiMain extends JFrame implements ActionListener
 		 
 		 JMenu help =new JMenu("help");
 		 jmb.add(help);
-		 
 		 help.addActionListener(this);
 		 
-		 JMenuItem open =new JMenuItem("open");
+		 open =new JMenuItem("open");
 		 file.add(open);
-		JMenuItem exit = new JMenuItem("exit");
-		file.add(exit);
 		open.addActionListener(this);
+		 
+		exit = new JMenuItem("exit");
+		file.add(exit);
+		exit.addActionListener(this);
+	
 	
 		button = new JButton("edit dictionary ");
 		button.addActionListener(this);
@@ -75,14 +77,15 @@ public class GuiMain extends JFrame implements ActionListener
 		if(e.getSource().equals(button))
 		{
 			EDIT word = new EDIT("edit ");
-			JOptionPane.showMessageDialog(null,"its working");
-			Click enter_word = new Click("search");
-		
+
 		}
 		else if (e.getSource().equals(open))
 		{
-			JOptionPane.showMessageDialog(null,"its working");
 			Click enter_word = new Click("search");
+		}
+		else if (e.getSource().equals(exit))
+		{
+			System.exit(0);
 		}
 		
 	}

@@ -1,5 +1,7 @@
 package week1;
-
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,10 +20,48 @@ public class EDIT extends JFrame implements ActionListener
 	JButton addword;
 	JButton delword;
 	JButton viewword;
+	JButton cheack;
 	JTextField textfield1;
 	JTextField textfield2;
 	JTextField textfield3;
+	JTextField textfield4;
+	
+	public JButton getCheack() {
+		return cheack;
+	}
 
+	public void setCheack(JButton cheack) {
+		this.cheack = cheack;
+	}
+
+	public JTextField getTextfield1() {
+		return textfield1;
+	}
+
+	public void setTextfield1(JTextField textfield1) {
+		this.textfield1 = textfield1;
+	}
+
+	public JTextField getTextfield4() {
+		return textfield4;
+	}
+
+	public void setTextfield4(JTextField textfield4) {
+		this.textfield4 = textfield4;
+	}
+
+	public FileManager getFi() {
+		return fi;
+	}
+
+	public void setFi(FileManager fi) {
+		this.fi = fi;
+	}
+
+	FileManager fi;
+
+	
+	
 	public JTextField getTextfield1s() 
 	{
 		return textfield1;
@@ -101,6 +141,7 @@ public class EDIT extends JFrame implements ActionListener
 		setLayout(new FlowLayout());
 		Box the_box = Box.createVerticalBox();
 		this.add(the_box);
+	
 		
 		addword = new JButton("Add word");
 		addword.addActionListener(this);
@@ -110,17 +151,17 @@ public class EDIT extends JFrame implements ActionListener
 		delword.addActionListener(this);
 		textfield2 =new JTextField("");
 		
-		viewword = new JButton("view words");
-		viewword.addActionListener(this);
-		textfield3= new JTextField("");
-	
+		
+		cheack = new JButton("cheack word");
+		cheack.addActionListener(this);
+		textfield4 = new JTextField("");
+		
+		the_box.add(textfield4);
+		the_box.add(cheack);
 		the_box.add(textfield1);
 		the_box.add(addword);
 		the_box.add(textfield2);
 		the_box.add(delword);
-		the_box.add(textfield3);
-		the_box.add(viewword);
-
 		
 		setVisible(true);
 		
@@ -135,9 +176,19 @@ public class EDIT extends JFrame implements ActionListener
 			setVisible(true);
 			
 			textfield1.getText();
-			//String cardsn = textfields.getText();
-			//System.exit(0);
+			//bad words put in loop
+			//slang words put in loop 
 		}
+
+		else if (e.getSource().equals(delword))
+		{
+			
+			setVisible(true);
+			
+			textfield1.getText();
+			//loop th
+		}
+
 	}
 
 }
