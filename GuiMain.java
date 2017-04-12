@@ -11,6 +11,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
+
 public class GuiMain extends JFrame implements ActionListener
 {
 	
@@ -18,7 +19,7 @@ public class GuiMain extends JFrame implements ActionListener
 	JButton button;
 	JMenu file;
 	JMenuBar jmb;
-	JMenu help;
+	JMenuItem help;
 	JMenuItem open;
 	JMenuItem exit;
 	
@@ -43,8 +44,8 @@ public class GuiMain extends JFrame implements ActionListener
 		 JMenu file = new JMenu("file");
 		 jmb.add(file);
 		 
-		 JMenu help =new JMenu("help");
-		 jmb.add(help);
+		 help =new JMenuItem("help");
+		 file.add(help);
 		 help.addActionListener(this);
 		 
 		 open =new JMenuItem("open");
@@ -78,6 +79,11 @@ public class GuiMain extends JFrame implements ActionListener
 		{
 			EDIT word = new EDIT("edit ");
 
+		}
+		else if (e.getSource().equals(help))
+		{
+			   
+			   help fm = new help();
 		}
 		else if (e.getSource().equals(open))
 		{

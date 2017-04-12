@@ -20,18 +20,18 @@ public class EDIT extends JFrame implements ActionListener
 	JButton addword;
 	JButton delword;
 	JButton viewword;
-	JButton cheack;
+	JButton check;
 	JTextField textfield1;
 	JTextField textfield2;
 	JTextField textfield3;
 	JTextField textfield4;
 	
 	public JButton getCheack() {
-		return cheack;
+		return check;
 	}
 
 	public void setCheack(JButton cheack) {
-		this.cheack = cheack;
+		this.check = cheack;
 	}
 
 	public JTextField getTextfield1() {
@@ -152,12 +152,12 @@ public class EDIT extends JFrame implements ActionListener
 		textfield2 =new JTextField("");
 		
 		
-		cheack = new JButton("cheack word");
-		cheack.addActionListener(this);
+		check = new JButton("cheack word");
+		check.addActionListener(this);
 		textfield4 = new JTextField("");
 		
 		the_box.add(textfield4);
-		the_box.add(cheack);
+		the_box.add(check);
 		the_box.add(textfield1);
 		the_box.add(addword);
 		the_box.add(textfield2);
@@ -167,13 +167,15 @@ public class EDIT extends JFrame implements ActionListener
 		
 	}
 	
-	public void actionPerformed(ActionEvent e) 
+	public void actionPerformed(ActionEvent e)
 	{
-		
-		if (e.getSource().equals(addword))
+		if(e.getSource().equals(check))
 		{
+			textfield4.getText();
 			
-			setVisible(true);
+		}
+		else if (e.getSource().equals(addword))
+		{
 			
 			textfield1.getText();
 			//bad words put in loop
@@ -183,9 +185,7 @@ public class EDIT extends JFrame implements ActionListener
 		else if (e.getSource().equals(delword))
 		{
 			
-			setVisible(true);
-			
-			textfield1.getText();
+			textfield2.getText();
 			//loop th
 		}
 
