@@ -1,0 +1,8 @@
+1.	To exits program, you can press the x at the top right corner of the screen or you can go on to file and press exit 
+2.	To searcher a file you may go on to file and click open which will bring you to a searcher page where you can go through all available files on the laptop 
+3.	 Enter a slang word or bad word go on to edit 
+4.	This page will give you three option on what action you can do
+5.	one is check the word or sentence you entered
+6.	two add word or sentence
+7.	three del word or sentence
+
