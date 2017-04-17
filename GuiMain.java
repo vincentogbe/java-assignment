@@ -9,7 +9,8 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
+
 
 
 public class GuiMain extends JFrame implements ActionListener
@@ -83,7 +84,11 @@ public class GuiMain extends JFrame implements ActionListener
 		else if (e.getSource().equals(help))
 		{
 			   
-			   help fm = new help();
+			   //help fm = new help();
+			FileManager fm = new FileManager("help.txt");
+			fm.connectToFile();
+			fm.readFile();
+			fm.closeReadFile();
 		}
 		else if (e.getSource().equals(open))
 		{
