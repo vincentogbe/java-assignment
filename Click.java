@@ -60,6 +60,7 @@ public class Click  implements ActionListener
 		frame.setSize(500,300);
 		frame.add(button);
 		frame.pack();
+		frame.add(JTextArea1);
 		frame.setVisible(true);
 	}
 
