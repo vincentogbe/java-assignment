@@ -30,6 +30,8 @@ import javax.swing.JTextField;
 public class EDIT extends JFrame implements ActionListener 
 {
 	//creating variables
+	
+	FileManager fi;
 	private JButton addword;
 	private JButton delword;
 	private JButton check;
@@ -61,10 +63,6 @@ public class EDIT extends JFrame implements ActionListener
 	public void setFi(FileManager fi) {
 		this.fi = fi;
 	}
-
-	FileManager fi;
-
-	
 	
 	public JTextField getTextfield1s() 
 	{

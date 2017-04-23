@@ -96,7 +96,7 @@ public class GuiMain extends JFrame implements ActionListener
 		}
 		else if (e.getSource().equals(exit))
 		{
-			System.exit(0);
+			exit close = new exit("");
 		}
 		
 	}
